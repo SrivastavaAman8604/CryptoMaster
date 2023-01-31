@@ -26,7 +26,7 @@ const Coins = () => {
     useEffect (() => {
         const fetchCoins = async() => {
             try {
-                const { data } = await axios.get(`${server}/coins/markets?vs_currency=${currency}&per_page=10&page=${page}`);
+                const { data } = await axios.get(`${server}/coins/markets?vs_currency=${currency}&per_page=30&page=${page}`);
                 setCoins((prev)=>[...prev,...data]);
                 setLoading(false);
                 // console.log(data);
